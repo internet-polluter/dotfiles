@@ -1,0 +1,12 @@
+font-family = "Fira Code"
+
+# Example font setting (adjust to your preference)
+font-family = "JetBrainsMono Nerd Font"
+font-size = 13.5
+
+# Gruvbox Material Colors
+foreground = "#d4be98"
+background = "#282828"
+
+title = 
+macos-titlebar-proxy-icon = hidden
