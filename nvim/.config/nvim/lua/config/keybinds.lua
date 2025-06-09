@@ -17,6 +17,9 @@ map("n", "<leader>q", ":q<CR>", { desc = "[Q]uit" })
 -- Note: The require('telescope.builtin') is wrapped in a function,
 -- so it is only called when you press the keymap.
 
+-- telescope registers (yank delete paste registers)
+map("n", "<leader>r", "<cmd>Telescope registers<cr>", { desc = "Show [R]egisters" })
+
 -- Find files
 map("n", "<leader>ff", function()
   require("telescope.builtin").find_files()
