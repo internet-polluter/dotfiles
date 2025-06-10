@@ -12,6 +12,9 @@ map("i", "kj", "<Esc>", { desc = "Exit insert mode" })
 -- Save and Quit
 map("n", "<leader>w", ":w<CR>", { desc = "[W]rite file" })
 map("n", "<leader>q", ":q<CR>", { desc = "[Q]uit" })
+-- Use CTRL-S for saving
+map("n", "<C-s>", ":w<CR>", { desc = "Save file" })
+map("i", "<C-s>", "<Esc>:w<CR>a", { desc = "Save file" })
 
 -- [[ Telescope ]]
 -- Note: The require('telescope.builtin') is wrapped in a function,
