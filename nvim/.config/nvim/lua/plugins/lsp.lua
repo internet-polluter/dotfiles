@@ -1,26 +1,16 @@
 return {
-  "neovim/nvim-lspconfig",
+  "williamboman/mason.nvim",
   dependencies = {
-    "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
   },
   config = function()
-    local lspconfig = require("lspconfig")
-    
-    -- Python LSP setup
-    lspconfig.pyright.setup({
-      settings = {
-        python = {
-          analysis = {
-            typeCheckingMode = "basic",
-            autoSearchPaths = true,
-            useLibraryCodeForTypes = true,
-          },
-        },
-      },
-    })
-    
-    -- LSP keybinds
+    require("mason").setup()
+    require("mason-lspconfig").setup()
+
+    -- Enable LSPs (nvim 0.11+)
+    vim.lsp.enable({ "rust_analyzer", "pyright" })
+
+    -- Keybinds
     vim.api.nvim_create_autocmd("LspAttach", {
       group = vim.api.nvim_create_augroup("UserLspConfig", {}),
       callback = function(ev)

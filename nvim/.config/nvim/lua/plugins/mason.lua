@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "pyright" }, -- Python LSP server
+        ensure_installed = { "pyright", "rust_analyzer" }, -- Python LSP server
         automatic_installation = true,
       })
     end,

@@ -27,23 +27,23 @@ require("config.keybinds")
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-	-- {
-	--      'sainnhe/gruvbox-material',
-	--      lazy = false,
-	--      priority = 1000,
-	--      config = function()
-	--        -- Optionally configure and load the colorscheme
-	--        -- directly inside the plugin declaration.
-	--        vim.g.gruvbox_material_enable_italic = true 
-	--        vim.cmd.colorscheme('gruvbox-material')
-	--      end
-	--    },
-{
-   "darianmorat/gruvdark.nvim",
-   lazy = false,
-   priority = 1000,
-   opts = {},
-},
+	{
+	     'sainnhe/gruvbox-material',
+	     lazy = false,
+	     priority = 1000,
+	     config = function()
+	       -- Optionally configure and load the colorscheme
+	       -- directly inside the plugin declaration.
+	       vim.g.gruvbox_material_enable_italic = true 
+	       vim.cmd.colorscheme('gruvbox-material')
+	     end
+	   },
+-- {
+--    "darianmorat/gruvdark.nvim",
+--    lazy = false,
+--    priority = 1000,
+--    opts = {},
+-- },
     -- import your plugins
     { import = "plugins" },
   },
